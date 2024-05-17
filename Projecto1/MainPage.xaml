@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projecto1.MainPage">
+
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="Inicio de Sesión" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0"/>
+
+        <StackLayout Grid.Row="1" Spacing="10">
+            <Entry x:Name="eUser" Keyboard="Email" Placeholder="Usuario"/>
+            <Entry x:Name="ePassword" IsPassword="True" Placeholder="Contraseña"/>
+            <Button x:Name="btnIngresar" Text="Ingresar" BackgroundColor="LightBlue" CornerRadius="20" Clicked="btnIngresar_Clicked"/>
+            <Button x:Name="btnNewUser" Text="Crear Nuevo Usuario" BackgroundColor="Red" CornerRadius="20" Clicked="btnNewUser_Clicked"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center">
+            <Button x:Name="btnOlvideContrasena" Text="¿Olvidaste tu contraseña?" TextColor="White" FontAttributes="Bold" FontSize="16" Clicked="btnOlvideContrasena_Clicked"
+            Margin="0,10,0,0"/>
+        </StackLayout>
+        
+    </Grid>
+</ContentPage>

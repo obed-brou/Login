@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projecto1.NuevoUsuario"
+             Title="NuevoUsuario">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <!-- Nombre Completo -->
+        <Entry Placeholder="Nombre Completo" x:Name="entryNombreCompleto" />
+
+        <!-- Teléfono -->
+        <Entry Placeholder="Teléfono" x:Name="entryTelefono" />
+
+        <!-- Email -->
+        <Entry Placeholder="Email" x:Name="entryEmail" />
+
+        <!-- Género -->
+        <Label Text="Género" />
+        <StackLayout Orientation="Horizontal">
+            <CheckBox x:Name="chkMale" />
+            <Label Text="M" />
+            <CheckBox x:Name="chkFemale" />
+            <Label Text="F" />
+        </StackLayout>
+
+        <!-- Fecha de nacimiento -->
+        <Label Text="Fecha de nacimiento:" />
+        <DatePicker x:Name="datePickerFechaNacimiento" />
+
+        <!-- Contraseña -->
+        <Entry Placeholder="Contraseña" IsPassword="True" x:Name="entryContraseña" />
+        <Entry Placeholder="Repetir Contraseña" IsPassword="True" x:Name="entryRepetirContraseña" />
+
+        <!-- Botones -->
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Guardar" Clicked="btnGuardar_Clicked"/>
+            <Button Text="Cancelar" />
+            <Button x:Name="btnRegresar" Text="Regresar" BackgroundColor="Red" CornerRadius="20" Clicked="btnRegresar_Clicked"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
